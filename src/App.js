@@ -14,23 +14,22 @@ function App() {
     console.log(response);
     const createdTasks = [
       ...tasks,
-      response.data,
-      // {
-
-      //   id: Math.round(Math.random() * 99999),
-      //   title: title,
-      //   taskDesc: taskDesc,
-      // },
+      // response.data,
+      {
+        id: Math.round(Math.random() * 99999),
+        title: title,
+        taskDesc: taskDesc,
+      },
     ];
     setTasks(createdTasks);
   };
-  const fetchTask = async () => {
-    const response = await axios.get("http://localhost:3000/tasks");
-    setTasks(response.data);
-  };
-  useEffect(() => {
-    fetchTask();
-  }, []);
+  // const fetchTask = async () => {
+  //   const response = await axios.get("http://localhost:3000/tasks");
+  //   setTasks(response.data);
+  // };
+  // useEffect(() => {
+  //   fetchTask();
+  // }, []);
 
   const deleteTaskById = (id) => {
     // await axios.delete(`http://localhost:3000/tasks/${id}`);
@@ -40,10 +39,10 @@ function App() {
     setTasks(afterDeletetingTask);
   };
   const editTaskById = async (id, updatedTitle, updatedTaskDesc) => {
-    await axios.put(`http://localhost:3000/tasks/${id}`, {
-      title: updatedTitle,
-      taskDesc: updatedTaskDesc,
-    });
+    // await axios.put(`http://localhost:3000/tasks/${id}`, {
+    //   title: updatedTitle,
+    //   taskDesc: updatedTaskDesc,
+    // });
     const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
         return { id, title: updatedTitle, taskDesc: updatedTaskDesc };
