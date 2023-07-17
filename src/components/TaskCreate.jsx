@@ -27,16 +27,16 @@ const TaskCreate = ({ onCreate, task, taskformUpdate, onUpdate }) => {
       {" "}
       {taskformUpdate ? (
         <div className="task-update">
-          <h3>Lütfen taskı düzenleyiniz</h3>
+          <h3>Lütfen Taskı Düzenleyiniz</h3>
           <form className="task-form">
-            <label className="task-label">başlığı düzenleyiniz</label>
+            <label className="task-label">Başlığı Düzenleyiniz</label>
             <input
               value={title}
               onChange={handleChange}
               className="task-input"
               type="text"
             />
-            <label className="task-label">Taskı düzenleyiniz</label>
+            <label className="task-label">Taskı Düzenleyiniz</label>
             <textarea
               value={taskDesc}
               onChange={handleTaskChange}
@@ -53,16 +53,16 @@ const TaskCreate = ({ onCreate, task, taskformUpdate, onUpdate }) => {
         </div>
       ) : (
         <div className="task-create">
-          <h3>Lütfen task ekleyiniz</h3>
+          <h3>Lütfen Task Ekleyiniz</h3>
           <form className="task-form">
-            <label className="task-label">başlık</label>
+            <label className="task-label">Başlık</label>
             <input
               value={title}
               onChange={handleChange}
               className="task-input"
               type="text"
             />
-            <label className="task-label">Task giriniz</label>
+            <label className="task-label">Task Giriniz</label>
             <textarea
               value={taskDesc}
               onChange={handleTaskChange}
